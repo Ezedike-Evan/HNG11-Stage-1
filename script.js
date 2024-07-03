@@ -1,5 +1,8 @@
 const data = {
     slackProfilePicturePath : './me-564px.jpg',
+    scrapeAnyWebHref:"http://scrapeanyweb.site/",
+    keywordLinkHref:"http://keyword.dog/",
+    hngLinkHref:"http://hng.tech/learn",
     DisplayName : 'Evan',
     slackEmail : 'egwomevan323@gmail.com',
     dayOfWeek : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
@@ -11,6 +14,9 @@ const data = {
 }
 
 const slackProfilePicture = document.querySelector('[data-testid="slackProfilePicture"]')
+const scrapeanyweb = document.querySelector('[data-testid="scrapeanywebLink"]')
+const keywordLink = document.querySelector('[data-testid="keywordLink"]')
+const hngLink = document.querySelector('[data-testid="hngLink"]')
 const slackEmail = document.querySelector('[data-testid="slackEmail"]')
 const slackDisplayName = document.querySelector('[data-testid="slackDisplayName"]')
 const currentDay = document.querySelector('[data-testid="currentDay"]')
@@ -18,6 +24,10 @@ const currentTimeUTC = document.querySelector('[data-testid="currentTimeUTC"]')
 
 slackProfilePicture.src = data.slackProfilePicturePath
 slackProfilePicture.alt = data.DisplayName
+slackProfilePicture.style.width = '100%'
+scrapeanyweb.href = data.scrapeAnyWebHref
+keywordLink.href = data.keywordLinkHref
+hngLink.href = data.hngLinkHref
 slackDisplayName.textContent = data.DisplayName
 slackEmail.textContent = data.slackEmail
 

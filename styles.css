@@ -35,9 +35,6 @@ span{
     max-width: max-content;
     width: 90vw;
 }
-.image .profile-img{
-    width: 100%;
-}
 .profile-card .text-data{
     display: flex;
     flex-direction: column;
