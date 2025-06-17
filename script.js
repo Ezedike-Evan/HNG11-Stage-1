@@ -1,7 +1,7 @@
 const data = {
-	slackProfilePicturePath: "./me-564px.jpg",
-	DisplayName: "Ezedike-Egwom Evan Ebube",
-	email: "egwomevan323@gmail.com",
+	slackProfilePicturePath: "./ayo.jpeg",
+	DisplayName: "Adeniji Ayomide Deborah",
+	email: "adenijiayomideay@gmail.com",
 };
 
 const slackProfilePicture = document.querySelector(
