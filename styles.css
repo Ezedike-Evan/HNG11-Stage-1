@@ -86,7 +86,7 @@ body {
 
 @media (max-width: 900px) {
 	body {
-		margin: 25px 0;
+		margin: 5px 0;
 	}
 	.profile-card {
 		flex-direction: column;
