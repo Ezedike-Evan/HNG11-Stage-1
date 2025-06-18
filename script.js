@@ -21,6 +21,7 @@ email.textContent = data.email;
 
 const socialIcons = [
   { name: "twitter", url: "https://twitter.com" },
+  { name: "facebook", url: "https://twitter.com" },
   { name: "linkedin", url: "https://linkedin.com" },
   { name: "instagram", url: "https://instagram.com" },
 ];
