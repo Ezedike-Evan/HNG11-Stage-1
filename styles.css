@@ -26,7 +26,7 @@ body {
 canvas {
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 0;;
 	z-index: -1;
 }
 
@@ -127,11 +127,15 @@ canvas {
     }
 	
 @media (max-width: 900px) {
-	body{
-		margin: 20px 0;
+	html, body {
+		min-height: 100%;
+		height: max-content;
 	}
 	.card {
 		flex-direction: column;
+	}
+	canvas {
+		min-height: 130vh;
 	}
 	.profile-img {
 		width: 100%;
