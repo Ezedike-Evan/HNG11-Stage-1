@@ -1,30 +1,28 @@
 const data = {
-	slackProfilePicturePath: "./me-564px.jpg",
-	DisplayName: "Ezedike-Egwom Evan Ebube",
-	email: "egwomevan323@gmail.com",
+	profilePicturePath: "./me-564px.jpg",
+	displayName: "Chidi Treasure Ebube",
+	email: "chidikom@gmail.com",
 };
 
-const slackProfilePicture = document.querySelector(
-	'[data-testid="slackProfilePicture"]'
+const profilePicture = document.querySelector(
+	'[data-testid="profilePicture"]'
 );
 
-const slackEmail = document.querySelector('[data-testid="slackEmail"]');
-const slackDisplayName = document.querySelector(
-	'[data-testid="slackDisplayName"]'
+const email = document.querySelector('[data-testid="email"]');
+const displayName = document.querySelector(
+	'[data-testid="displayName"]'
 );
 
-slackProfilePicture.src = data.slackProfilePicturePath;
-slackProfilePicture.alt = data.DisplayName;
-slackProfilePicture.style.width = "100%";
-slackDisplayName.textContent = data.DisplayName;
-slackEmail.textContent = data.email;
+profilePicture.src = data.profilePicturePath;
+profilePicture.alt = data.displayName;
+displayName.textContent = data.displayName;
+email.textContent = data.email;
 
 
 const socialIcons = [
   { name: "twitter", url: "https://twitter.com" },
   { name: "linkedin", url: "https://linkedin.com" },
   { name: "instagram", url: "https://instagram.com" },
-  { name: "whatsapp", url: "https://wa.me/1234567890" },
 ];
 
 const container = document.getElementById("social-links");

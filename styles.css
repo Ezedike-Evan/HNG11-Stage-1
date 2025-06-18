@@ -4,7 +4,8 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 	text-decoration: none;
-	line-height: 1.5;
+	line-height: 1.4;
+	font-family: sans-serif;
 }
 body {
 	display: flex;
@@ -16,43 +17,54 @@ body {
 .profile-card {
 	display: flex;
 	height: 65%;
-	max-width: 750px;
+	max-width: 900px;
 	width: 80%;
 	background: #fff;
 	border-radius: 24px;
 	overflow: hidden;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-
 .image {
-	width: 50%;
+	width: 800px;
+	height: 100%;
+}
+.profile-img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 .profile-card .text-data {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	padding: 20px;
+	padding: 20px 50px;
 }
 .text-data .name {
 	font-size: 24px;
-	font-weight: 700;
+	font-weight: 900;
 }
 .text-data .email {
-	margin: 5px 0;
 	text-align: center;
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: 500;
 }
 .text-data .description {
 	font-size: 14px;
 }
+.text-data .title{
+    margin-top: 8px;
+    font-size: 14px;
+	font-weight: bolder;
+	text-transform: capitalize;
+}
 .text-data ul {
 	margin-left: 16px;
-	margin-top: 8px;
 }
 .text-data ul li {
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
+	text-transform: capitalize;
 }
 
 .social-links {
@@ -60,7 +72,6 @@ body {
 	gap: 32px;
 	justify-content: center;
 }
-
 .social-links img {
 	width: 24px;
 	height: 24px;
@@ -72,11 +83,11 @@ body {
 }
 
 @media (max-width: 900px) {
-    body{
-        margin: 125px 0;
-    }
+	body {
+		margin: 125px 0;
+	}
 	.profile-card {
-        flex-direction: column;
+		flex-direction: column;
 		height: max-content;
 	}
 	.image {
@@ -90,20 +101,17 @@ body {
 		font-size: 14px;
 	}
 	.text-data .description {
-        margin-top: 12px;
+		margin-top: 12px;
 		font-size: 14px;
 	}
-    .social{
-        margin-top: 12px;
-    }
-    .social p{
-        font-size: 12px;
-    }
+	.social {
+		margin-top: 12px;
+	}
+	.social p {
+		font-size: 12px;
+	}
 	.social-links img {
 		width: 20px;
 		height: 20px;
 	}
-}
-
-@media (max-width: 355px) {
 }
