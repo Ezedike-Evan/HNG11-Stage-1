@@ -92,6 +92,9 @@ body {
 	.image {
 		width: 100%;
 	}
+	.profile-card .text-data {
+		padding: 24px 20px;
+	}
 	.text-data .name {
 		font-size: 20px;
 	}
