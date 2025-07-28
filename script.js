@@ -1,30 +1,56 @@
-const data = {
-	slackProfilePicturePath: "./ayo.jpeg",
-	DisplayName: "Adeniji Ayomide Deborah",
-	email: "adenijiayomideay@gmail.com",
-};
+    const canvas = document.getElementById('sparkle');
+    const ctx = canvas.getContext('2d');
 
-const slackProfilePicture = document.querySelector(
-	'[data-testid="slackProfilePicture"]'
-);
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
 
-const slackEmail = document.querySelector('[data-testid="slackEmail"]');
-const slackDisplayName = document.querySelector(
-	'[data-testid="slackDisplayName"]'
-);
+    let sparkles = [];
 
-slackProfilePicture.src = data.slackProfilePicturePath;
-slackProfilePicture.alt = data.DisplayName;
-slackProfilePicture.style.width = "100%";
-slackDisplayName.textContent = data.DisplayName;
-slackEmail.textContent = data.email;
+    for (let i = 0; i < 500; i++) {
+      sparkles.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 2 + 0.5,
+        d: Math.random() * 1.5 + 0.5
+      });
+    }
 
+    function drawSparkles() {
+      ctx.clearRect(0, 0, w, h);
+      for (let i = 0; i < sparkles.length; i++) {
+        const s = sparkles[i];
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255, 220, 190, 0.8)";
+        ctx.fill();
+      }
 
-const socialIcons = [
+      moveSparkles();
+    }
+
+    function moveSparkles() {
+      for (let i = 0; i < sparkles.length; i++) {
+        let s = sparkles[i];
+        s.y -= s.d;
+        if (s.y < 0) {
+          s.y = h;
+          s.x = Math.random() * w;
+        }
+      }
+    }
+
+    setInterval(drawSparkles, .3);
+
+    window.addEventListener("resize", () => {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    });
+
+    const socialIcons = [
   { name: "twitter", url: "https://twitter.com" },
+  { name: "facebook", url: "https://twitter.com" },
   { name: "linkedin", url: "https://linkedin.com" },
   { name: "instagram", url: "https://instagram.com" },
-  { name: "whatsapp", url: "https://wa.me/1234567890" },
 ];
 
 const container = document.getElementById("social-links");
