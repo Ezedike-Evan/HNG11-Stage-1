@@ -47,10 +47,10 @@
     });
 
     const socialIcons = [
-  { name: "twitter", url: "https://twitter.com" },
-  { name: "facebook", url: "https://twitter.com" },
-  { name: "linkedin", url: "https://linkedin.com" },
-  { name: "instagram", url: "https://instagram.com" },
+  { name: "twitter", url: "https://x.com/a_adeniji?t=855rEF3gjzjVX3CeZiJ83Q&s=09" },
+  { name: "facebook", url: "https://www.facebook.com/adeniji7236" },
+  { name: "linkedin", url: "https://www.linkedin.com/in/adeniji-ayomide-oluwaseun-512720262" },
+  { name: "instagram", url: "https://www.instagram.com/adeniji7236?igsh=YzljYTk1ODg3Zg==" },
 ];
 
 const container = document.getElementById("social-links");
